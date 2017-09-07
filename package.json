@@ -1,0 +1,26 @@
+{
+    "name": "aresdiscordbot",
+    "version": "1.0.0",
+    "description": "discord bot",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Cwanyo/AresDiscordBot.git"
+    },
+    "author": "Cwan",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Cwanyo/AresDiscordBot/issues"
+    },
+    "homepage": "https://github.com/Cwanyo/AresDiscordBot#readme",
+    "dependencies": {
+        "discord.js": "^11.2.1"
+    },
+    "devDependencies": {
+        "eslint-config-standard": "^10.2.1",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-node": "^5.1.1",
+        "eslint-plugin-promise": "^3.5.0",
+        "eslint-plugin-standard": "^3.0.1"
+    }
+}
