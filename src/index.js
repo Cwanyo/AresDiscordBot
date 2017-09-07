@@ -27,6 +27,7 @@ bot.on('message', async message => {
     if (command.startsWith(prefix)) {
         let randomColor = '#000000'.replace(/0/g, function() { return (~~(Math.random() * 16)).toString(16); });
         //commands that start with !<command><arg>
+
         if (command === `${prefix}ข้อมูลของฉัน`) {
             let embed = new Discord.RichEmbed()
                 .setTitle(`ข้อมูลของ @${message.author.username}`)
@@ -37,6 +38,11 @@ bot.on('message', async message => {
             //message.channel.sendEmbed(embed);
             message.reply(embed);
             return;
+        }
+
+        if (command === `${prefix}ล้างแชท`) {
+            let messagecount = parseInt(100);
+            message.channel.fetchMessages({ limit: messagecount }).then(messages => message.channel.bulkDelete(messages));
         }
 
     } else {
