@@ -45,7 +45,7 @@ bot.on('message', async message => {
         if (command === `${prefix}ล้างแชท`) {
             let messagecount = 100;
             if (args.length > 0) {
-                if (isNaN(args[0]) ? !1 : (x = parseFloat(args[0]), ((0 | x) === x) && (x > 2))) {
+                if (isNaN(args[0]) ? !1 : (x = parseFloat(args[0]), ((0 | x) === x) && (x > 1))) {
                     messagecount = parseInt(args[0]);
                 }
             }
