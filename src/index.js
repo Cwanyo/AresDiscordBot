@@ -46,7 +46,7 @@ bot.on('message', async message => {
             let messagecount = 100;
             if (args.length > 0) {
                 if (isNaN(args[0]) ? !1 : (x = parseFloat(args[0]), ((0 | x) === x) && (x > 0))) {
-                    message = parseInt(args[0]);
+                    messagecount = parseInt(args[0]);
                 }
             }
             message.channel.fetchMessages({ limit: messagecount }).then(messages => message.channel.bulkDelete(messages));
