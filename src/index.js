@@ -26,22 +26,29 @@ bot.on('message', async message => {
 
     if (command.startsWith(prefix)) {
         let randomColor = '#000000'.replace(/0/g, function() { return (~~(Math.random() * 16)).toString(16); });
-        //commands that start with !<command><arg>
+        //commands that start with !<command> <arg>
 
+        //!ข้อมูลของฉัน
         if (command === `${prefix}ข้อมูลของฉัน`) {
             let embed = new Discord.RichEmbed()
-                .setTitle(`ข้อมูลของ @${message.author.username}`)
+                .setTitle('||ข้อมูลบัญชี||')
                 .setImage(message.author.avatarURL)
                 .setColor(randomColor)
-                .addField('Username', `${message.author.username}#${message.author.discriminator}`)
+                .addField('ชื่อบัญชี', `@${message.author.username}#${message.author.discriminator}`)
                 .addField('สร้างเมื่อ', message.author.createdAt);
-            //message.channel.sendEmbed(embed);
-            message.reply(embed);
+            message.reply(' ');
+            message.channel.sendEmbed(embed);
             return;
         }
 
+        //!ล้างแชท <number>
         if (command === `${prefix}ล้างแชท`) {
-            let messagecount = parseInt(100);
+            let messagecount = 100;
+            if (args.length > 0) {
+                if (isNaN(args[0]) ? !1 : (x = parseFloat(args[0]), ((0 | x) === x) && (x > 0))) {
+                    message = parseInt(args[0]);
+                }
+            }
             message.channel.fetchMessages({ limit: messagecount }).then(messages => message.channel.bulkDelete(messages));
         }
 
