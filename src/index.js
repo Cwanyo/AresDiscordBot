@@ -2,10 +2,19 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    console.log('I am ready!');
+    console.log('Ares is Boot Up!');
 });
 
 client.on('message', message => {
+    //ignore message from bot
+    if (message.author.bot) {
+        return;
+    }
+
+    if (typeof message == 'number') {
+        message.reply(parseInt(message.content) + 1);
+    }
+
     if (message.content === 'ping') {
         message.reply('pong');
     }
