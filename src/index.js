@@ -11,7 +11,7 @@ client.on('message', message => {
         return;
     }
 
-    if (isNaN(message.content) ? !1 : (x = parseFloat(value), (0 | x) === x)) {
+    if (isNaN(message.content) ? !1 : (x = parseFloat(message.content), (0 | x) === x)) {
 
         message.reply(parseInt(message.content) + 1);
     }
