@@ -34,8 +34,8 @@ bot.on('message', async message => {
                 .setColor(randomColor)
                 .addField('Username', `${message.author.username}#${message.author.discriminator}`)
                 .addField('สร้างเมื่อ', message.author.createdAt);
-            message.channel.sendEmbed(embed);
-            message.client.sendEmbed(embed);
+            //message.channel.sendEmbed(embed);
+            message.reply(embed);
             return;
         }
 
