@@ -3,6 +3,10 @@
     "version": "1.0.0",
     "description": "discord bot",
     "main": "index.js",
+    "engines": {
+        "node": "latest",
+        "npm": "latest"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Cwanyo/AresDiscordBot.git"
