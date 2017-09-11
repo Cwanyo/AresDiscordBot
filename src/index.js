@@ -77,6 +77,11 @@ bot.on('message', async message => {
             message.reply('ฝันดี');
             return;
         }
+
+        if (message.content === 'fuck you') {
+            message.reply('fuck you too');
+            return;
+        }
     }
 
 });
