@@ -78,10 +78,6 @@ bot.on('message', async message => {
             return;
         }
 
-        if (message.content === 'fuck you') {
-            message.reply('fuck you too');
-            return;
-        }
     }
 
 });
